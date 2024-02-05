@@ -108,7 +108,7 @@ reg16 = lm(crime~provmf2645 + provmf2645_2  +  inequality+ eximfdi_gdp + urbaniz
 reg17 = lm(crime~provmf2645 + provmf2645_2 + provmf2645_3 +  inequality+ eximfdi_gdp + urbanization +immigration+police+construction_100, data = data_shit)
 export_summs(reg13, reg14, reg15,reg16, reg17, robust = TRUE,  confint = TRUE,digits = 3,to.file = "xlsx",file.name="damn4.xlsx")
 
-#model5 is not fucking good
+#model5 is not good
 linearHypothesis(reg15, c('provmf2645:inequality= 0', 'provmf2645_2:inequality= 0','provmf2645_3:inequality= 0' ), white.adjust = 'hc1')
 
 
